@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffefff;
+    color: #333;
+}
+
+nav {
+    background: color #f4cde0; /* Light background color for the navbar */
+    margin-bottom: 0; /* Ensure no margin below the navbar */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items to the left */
+    padding: 1rem; /* Add padding to the navbar */
+    font-family:'Poppins',sans-serif;
+}
+
+.navbar-brand {
+    margin-bottom: 1rem; /* Add space below the brand */
+    font-size: 1.5rem; /* Increase font size for the brand */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    width: 100%; /* Ensure the nav takes full width */
+}
+
+.nav-link {
+    color: black; /* Black color for nav links */
+    font-weight: bold; /* Bold font for nav links */
+    padding: 0.5rem 1rem; /* Add padding to nav links */
+}
+
+.nav-link:hover {
+    color: #6f42c1; /* Violet color on hover */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    background-color: #f4cde0;
+    color: #f4cde0;
+    position: relative;
+}
+
+header .logo img {
+    max-width: 150px; /* Adjust logo size */
+    height: auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.intro {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.categories .category {
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.categories .category img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the container */
+    margin-bottom: 0.5rem;
+}
+
+.categories .category a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.categories .category a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+header {
+    background-color: #f4cde0;
+    padding: 5px; /* Reduced padding */
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+header .logo img {
+    width: 40px; /* Adjusted size */
+    position: absolute;
+    left: 20px;
+    top: 20px; /* Adjusted position */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; 
+    color: white; /* Further reduced font size */
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.navbar-nav .dropdown-menu {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better depth */
+    transition: background 0.3s ease; /* Smooth transition for background */
+    z-index: 1050; /* Ensure the dropdown is above other elements */
+    position: absolute; /* Positioning context for dropdown */
+}
+
+/* Font color inside dropdown menu */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black /* Violet color */
+}
+
+/* Font color on hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #5c2d91; /* Darker violet on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover */
+}
+
+/* Ensure the carousel has lower z-index */
+.carousel {
+    position: relative; /* Ensure it’s positioned properly */
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+/* Ensure the dropdown menu container is properly positioned */
+.navbar {
+    position: relative; /* Set positioning context for the dropdown */
+    z-index: 100; /* Ensure navbar has a high z-index */
+}
+
+.category {
+    text-align: center;
+    margin-bottom: 20px; /* Space between categories */
+}
+
+.category img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the container */
+    border-radius: 10px;
+    margin: 0 auto 10px auto; /* Center the image and add space below */
+    display: block;
+}
+
+.category a {
+    width: 150px; /* Match the width of the image */
+    display: block;
+    margin: 0 auto; /* Center the button */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #f4cde0;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.category a:hover {
+    background-color: gray;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #ff66b2;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the container */
+    border-radius: 10px;
+    margin: 0 auto 10px auto; /* Center the image and add space below */
+    display: block;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1s forwards; /* Apply the animation */
+}
+
+.category:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.category:nth-child(2) img {
+    animation-delay: 0.5s;
+}
+
+.category:nth-child(3) img {
+    animation-delay: 0.8;
+}
+
+.category:nth-child(4) img {
+    animation-delay: 1.2s;
+}
+
+.category:nth-child(5) img {
+    animation-delay: 1.6s;
+}
+
+.category:nth-child(6) img {
+    animation-delay: 1.9s;
+}
+
+.category:nth-child(7) img {
+    animation-delay: 2.2s;
+}
+
+.category:nth-child(8) img {
+    animation-delay: 2.6s;
+}
+
+.category:nth-child(9) img {
+    animation-delay: 3s;
+}
+
+.category a {
+    width: 150px; /* Match the width of the image */
+    display: block;
+    margin: 0 auto; /* Center the button */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #f4cde0;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1s forwards; /* Apply the animation */
+    animation-delay: calc(var(--i) * 1s); /* Delay based on index */
+}
+
+.category:nth-child(1) a {
+    animation-delay: 0s;
+}
+
+.category:nth-child(2) a {
+    animation-delay: 0.6s;
+}
+
+.category:nth-child(3) a {
+    animation-delay: 0.9s;
+}
+
+.category:nth-child(4) a {
+    animation-delay: 1.3s;
+}
+
+.category:nth-child(5) a {
+    animation-delay: 1.7s;
+}
+
+.category:nth-child(6) a {
+    animation-delay: 2s;
+}
+
+.category:nth-child(7) a {
+    animation-delay: 2.4s;
+}
+
+.category:nth-child(8) a {
+    animation-delay: 2.8s;
+}
+
+.category:nth-child(9) a {
+    animation-delay: 3.2s;
+}

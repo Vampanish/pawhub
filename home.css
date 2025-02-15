@@ -1,0 +1,222 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+/* Initial hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Visible state */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header styling */
+header {
+    background-color: #f4cde0;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    z-index: 100; /* Ensure header has a high z-index */
+    position: relative; /* Ensure stacking context */
+}
+
+/* Hero section styling */
+.hero {
+    position: relative; /* Set positioning context for images */
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+/* Buttons in hero section */
+.hero-buttons {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-buttons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-buttons button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Objectives section styling */
+.objectives {
+    background-color: #ffe6f2;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation dropdown styling */
+nav ul li:hover ul.dropdown-content {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff99cc;
+}
+
+/* Mission content styling */
+.mission-content {
+    display: none;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight for active content */
+.mission-content.highlight {
+    display: block;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Buttons for mission section */
+.mission-buttons button {
+    background-color: #ff99cc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.mission-buttons button.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer contact styling */
+footer .footer-contact {
+    margin: 0;
+}
+
+/* About Us section styling */
+.about-us {
+    margin-bottom: 50px; /* Add space for service sections */
+}
+
+.about-us h2 {
+    font-family: 'Poppins', sans-serif; /* Adjust to preferred font */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.about-us p {
+    font-family: 'Poppins', sans-serif; /* Adjust to preferred font */
+    font-size: 1rem;
+}
+
+/* Product styling */
+.product {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.product img:hover {
+    opacity: 0.8;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+/* Glassy effect for dropdown menu */
+.navbar-nav .dropdown-menu {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better depth */
+    transition: background 0.3s ease; /* Smooth transition for background */
+    z-index: 1050; /* Ensure the dropdown is above other elements */
+    position: absolute; /* Positioning context for dropdown */
+}
+
+/* Font color inside dropdown menu */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black /* Violet color */
+}
+
+/* Font color on hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #5c2d91; /* Darker violet on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover */
+}
+
+/* Ensure the carousel has lower z-index */
+.carousel {
+    position: relative; /* Ensure it’s positioned properly */
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+/* Ensure the dropdown menu container is properly positioned */
+.navbar {
+    position: relative; /* Set positioning context for the dropdown */
+    z-index: 100; /* Ensure navbar has a high z-index */
+}

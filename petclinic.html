@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Clinic</title>
+    <link rel="stylesheet" href="clinicstyles.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffefff;
+        }
+
+        .service-box {
+            border: 5px solid red;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            /* Set the desired height to be the same as the width */
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+            /* Ensure the image covers the area without distortion */
+        }
+
+        .img-fluid.padded {
+            /* Ensure the height is fixed */
+            padding: 15px;
+            /* Add padding around the images */
+            object-fit: cover;
+            /* Ensure the image covers the area without distortion */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        SERVICES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="petclinic.html">Pet clinic</a>
+                        <a class="dropdown-item" href="mahi_petneeds.html">Pet needs</a>
+                        <a class="dropdown-item" href="pharmacy.html">Pet pharmacy</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="community.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container header-content">
+            <div class="header-logo">
+                <img src="petclinicimages/pawlogo.png" width="100" height="100" alt="Logo" class="img-fluid">
+            </div>
+            <div class="header-title">
+                <h1 class="ml-3"><strong>PET CLINIC</strong></h1>
+            </div>
+        </div>
+    </header>
+    <section class="intro my-4 text-center">
+        <h6>Welcome to our pet clinic. We are a team of veterinarians and professionals passionate about providing
+            excellent veterinary care to pets.</h6>
+    </section>
+    <section class="container my-2">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="petclinicimages/pet1.jpg" class="img-fluid padded" alt="Pet 1">
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="service-box my-3">
+                    <h4>SERVICES OFFERED:</h4>
+                    <ul>
+                        <li>Vaccinations</li>
+                        <li>Grooming</li>
+                        <li>Boarding</li>
+                        <li>Surgeries</li>
+                        <li>Dental care</li>
+                        <li>General checkup</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="petclinicimages/pet2.jpg" class="img-fluid padded" alt="Pet 2">
+            </div>
+        </div>
+    </section>
+    <section class="gallery text-center md-3">
+        <img src="petclinicimages/pets.jpeg" class="img-fluid" alt="Pets">
+    </section>
+    <footer>
+        <div class="footer-contact">
+            <p>Contact us at: <a href="mailto:arivworks@outlook.com">arivworks@outlook.com</a></p>
+            <p>Address: Ariv Executions, Technology Business Incubator, First floor, Excellence building, Thiayagarajar
+                Advanced Research Center block, Madurai-625015.</p>
+            <p>Phone: +91 99405 27561</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

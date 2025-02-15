@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawhub</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        .accordion {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-header:hover {
+            background-color: #e2e6ea;
+        }
+
+        .accordion-body {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .accordion-body.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="home.html"><img src="logo.png" alt="Logo" height="75px" width="75px"></a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                OUR SERVICES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="petclinic.html">Pet Clinic</a></li>
+                                <li><a class="dropdown-item" href="mahi_petneeds.html">Pet Needs</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html">Pet Pharmacy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" id="jot" href="community.html">JOIN OUR TEAM</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="carouselExampleIndicators" class="carousel slide hero position-relative text-center text-white"
+        data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="home.html"><img src="page.png" class="d-block w-100" alt="Pets"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="petclinic.html"><img src="petclinic.png" class="d-block w-100" alt="Logo"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="mahi_petneeds.html"><img src="need.png" class="d-block w-100" alt="Logo"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="pharmacy.html"><img src="pharmacy.png" class="d-block w-100" alt="Logo"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="community.html"><img src="community.png" class="d-block w-100" alt="Logo"></a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-5 content">
+        <div class="row">
+            <section class="objectives col-md-6 p-4">
+                <h2>OBJECTIVES</h2>
+                <ul>
+                    <li>Get New Clients: Make it easy for new people to find and choose our clinic.</li>
+                    <li>Share Pet Care Tips: Provide helpful information about taking care of pets.</li>
+                    <li>Show Our Services: Clearly explain what services we offer and how we can help pets.</li>
+                    <li>Stay Connected: Keep in touch with our clients through social media and newsletters.</li>
+                </ul>
+            </section>
+            <section class="mission col-md-6">
+                <div class="btn-group mb-3 w-100 mission-buttons" role="group">
+                    <button onclick="showContent('passion'),showContentss('p-b')" id="p-b"
+                        class="bt btn btn-secondary">Passion</button>
+                    <button onclick="showContent('mission'),showContentss('m-b')" id="m-b"
+                        class="bt btn btn-secondary">Mission</button>
+                    <button onclick="showContent('vision'),showContentss('v-b')" id="v-b"
+                        class="bt btn btn-secondary">Vision</button>
+                </div>
+                <div id="passion" class="mission-content">
+                    <p>1) Passion for Pets: Our team is deeply passionate about the well-being of every pet.</p>
+                    <p>2) Dedicated Service: We provide attentive and personalized care to each animal.</p>
+                    <p>3) Emotional Connection: We foster a loving environment for pets and their owners.</p>
+                    <p>4) Community Love: Engaging with the pet community to share our passion.</p>
+                </div>
+                <div id="mission" class="mission-content" style="display: none;">
+                    <p>1) Commitment to Quality: We aim to deliver top-notch care for all pets.</p>
+                    <p>2) Professional Growth: Continuously improving our skills and knowledge.</p>
+                    <p>3) Ethical Standards: Adhering to the highest ethical standards in pet care.</p>
+                    <p>4) Innovative Solutions: Implementing the latest advancements in veterinary care.</p>
+                </div>
+                <div id="vision" class="mission-content" style="display: none;">
+                    <p>1) Future of Pet Care: Leading the way in innovative pet care solutions.</p>
+                    <p>2) Global Impact: Expanding our reach to make a global impact in animal welfare.</p>
+                    <p>3) Technology Integration: Utilizing technology to enhance pet care services.</p>
+                    <p>4) Educational Outreach: Educating pet owners on best practices for pet health.</p>
+                </div>
+            </section>
+        </div>
+        <section class="about-us my-5">
+            <h2>About Us</h2>
+            <p>We are a team of dedicated professionals who are passionate about providing the best possible care for
+                your pets. Our team includes experienced veterinarians, skilled technicians, and compassionate support
+                staff, all committed to the health and well-being of your furry friends. We believe in continuous
+                learning and stay updated with the latest advancements in veterinary medicine...<a
+                    href="about.html">read more</a></p>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <div class="container my-5">
+            <h2>FAQs</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(event)">What should I feed my pet?</div>
+                    <div class="accordion-body">
+                        The diet for your pet depends on their age, breed, and health condition. Generally, pets should
+                        be fed high-quality, age-appropriate food and given fresh water daily. Consult your veterinarian
+                        for personalized recommendations.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(event)">How often should I take my pet to the
+                        vet?</div>
+                    <div class="accordion-body">
+                        Pets should have regular veterinary check-ups at least once a year. However, puppies, kittens,
+                        and senior pets may require more frequent visits. Regular vet visits help in early detection of
+                        health issues and maintaining overall wellness.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(event)">How can I keep my pet's teeth
+                        healthy?</div>
+                    <div class="accordion-body">
+                        Regular brushing with pet-specific toothpaste, providing dental chews, and scheduling
+                        professional cleanings with your vet can help maintain your pet's dental health. Good dental
+                        hygiene prevents plaque build-up and oral diseases.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(event)">What are the signs of a sick pet?
+                    </div>
+                    <div class="accordion-body">
+                        Signs of illness in pets include changes in appetite, lethargy, vomiting, diarrhea, coughing, or
+                        changes in behavior. If you notice any of these signs, it's important to consult with your
+                        veterinarian as soon as possible.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Contact us at: <a href="mailto:arivworks@outlook.com">arivworks@outlook.com</a></p>
+            <p>Address: Ariv Executions, Technology Business Incubator, First floor, Excellence building, Thiagarajar
+                Advance Research center block, Madurai-625015.</p>
+            <p>Phone: +91 99405 27561</p>
+        </div>
+    </footer>
+    <!-- Add Popper.js and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"
+        integrity="sha512-oBqDVmMz4fnFO9gybU5P8bKwH5hI7AE1meHQK4vA1SoRZCOk8xKj8eNDYfg9Me0JpVF2C7n06fWmUotLtGUHZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="home.js"></script>
+    <script>
+        function toggleAccordion(event) {
+            const header = event.target;
+            const body = header.nextElementSibling;
+            body.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

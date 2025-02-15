@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffefff;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #ff89cc, #ffc1e3);
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-logo {
+    width: 50px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 1000px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 30px 20px;
+    display: block;
+    color: #000;
+    cursor: pointer;
+}
+
+nav ul li ul.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;  /* Align dropdown to the end */
+    background-color: #f4cde0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    min-width: 100%;  /* Ensure dropdown width matches parent */
+}
+
+nav ul li ul.dropdown-content li a {
+    padding: 10px;
+    display: block;
+}
+
+nav ul li:hover ul.dropdown-content {
+    display: block;
+}
+
+header .logo img {
+    height: 75px;
+    width: 75px;
+    padding-right: 1000px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.0em;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+.image-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 10px;  /* Adjust padding as needed */
+}
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.services {
+    background-color: #f4cde0;
+    padding: 20px;
+    text-align: center;
+}
+
+.services .service-box {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #fe0000;
+    border-radius: 10px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .service-box ul {
+    list-style-type: none;
+    padding: 50px;
+}
+
+.services .service-box li {
+    margin: 5px 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.gallery img {
+    margin: 10px;
+    width: 1000px;  /* Adjust the width as needed */
+    height: auto;  /* Ensure the aspect ratio is maintained */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+.navbar-nav .dropdown-menu {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better depth */
+    transition: background 0.3s ease; /* Smooth transition for background */
+    z-index: 1050; /* Ensure the dropdown is above other elements */
+    position: absolute; /* Positioning context for dropdown */
+}
+
+/* Font color inside dropdown menu */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black /* Violet color */
+}
+
+/* Font color on hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #5c2d91; /* Darker violet on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover */
+}
+
+/* Ensure the carousel has lower z-index */
+.carousel {
+    position: relative; /* Ensure it’s positioned properly */
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+/* Ensure the dropdown menu container is properly positioned */
+.navbar {
+    position: relative; /* Set positioning context for the dropdown */
+    z-index: 100; /* Ensure navbar has a high z-index */
+}

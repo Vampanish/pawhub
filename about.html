@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pet Clinic</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      
+        .navbar {
+            margin-bottom: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1050;
+            background-color: #ffefff;
+            padding: 0%;
+        }
+        .navbar-brand img {
+            max-width: 150px;
+        }
+        .section-header {
+            background-color: #f7dbe8;
+            padding: 5px 0;
+            margin-bottom: 15px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .section-content {
+            padding: 40px 0;
+            margin-bottom: 20px;
+        }
+        .text-content {
+            background-color: #fff0f5;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+            min-height: 200px;
+        }
+        h1, h2 {
+            color: #ff69b4;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        .navbar-nav .dropdown-menu {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better depth */
+    transition: background 0.3s ease; /* Smooth transition for background */
+    z-index: 1050; /* Ensure the dropdown is above other elements */
+    position: absolute; /* Positioning context for dropdown */
+}
+
+/* Font color inside dropdown menu */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black /* Violet color */
+}
+
+/* Font color on hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #5c2d91; /* Darker violet on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover */
+}
+
+/* Ensure the carousel has lower z-index */
+.carousel {
+    position: relative; /* Ensure it’s positioned properly */
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+/* Ensure the dropdown menu container is properly positioned */
+.navbar {
+    position: relative; /* Set positioning context for the dropdown */
+    z-index: 100; /* Ensure navbar has a high z-index */
+}
+
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #ff66b2;
+            text-decoration: none;
+        }
+        .section-content img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .more-text {
+            display: none;
+        }
+        .read-more-btn {
+            color: #ff69b4;
+            cursor: pointer;
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .extra-image {
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Pet Clinic Logo" height="50px" width="50px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SERVICES
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="petclinic.html">Pet clinic</a>
+                    <a class="dropdown-item" href="mahi_petneeds.html">Pet needs</a>
+                    <a class="dropdown-item" href="pharmacy.html">Pet pharmacy</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="community.html">CONTACT</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row section-header text-center">
+        <div class="col fade-in">
+            <h1>About Us</h1>
+            <p><strong>WELCOME TO PAWHUB</strong></p>
+            <p>Our pet clinic is dedicated to providing the best care for your beloved pets. We have a team of experienced veterinarians and staff who are passionate about animal health and well-being.</p>
+        </div>
+    </div>
+    <div class="row section-content">
+        <div class="col-md-6 fade-in">
+            <img src="about1.png" alt="Who We Are Image">
+        </div>
+        <div class="col-md-6 fade-in">
+            <div class="text-content">
+                <h2>Who We Are</h2>
+                <p class="text">
+                    We are a team of dedicated professionals who are passionate about providing the best possible care for your pets. Our team includes experienced veterinarians, skilled technicians, and compassionate support staff, all committed to the health and well-being of your furry friends.
+                </p>
+                <p class="more-text">
+                    We believe in continuous learning and stay updated with the latest advancements in veterinary medicine. Our clinic is a welcoming place where you and your pets will always feel at home.
+                </p>
+                <p class="more-text">
+                    Our clinic is dedicated to providing exceptional veterinary care to the community. We understand that your pets are beloved family members, and we treat them with the same love and respect that you do. From routine check-ups to emergency care, we are here for you every step of the way.
+                </p>
+                <span class="read-more-btn">Read More</span>
+            </div>
+        </div>
+    </div>
+    <div class="row section-content">
+        <div class="col-md-6 fade-in">
+            <div class="text-content">
+                <h2>What We Do</h2>
+                <p class="text">
+                    At our pet clinic, we offer a wide range of services to ensure your pets stay healthy and happy. From routine check-ups and vaccinations to advanced diagnostics and surgical procedures, we are equipped to handle all of your pet's healthcare needs.
+                </p>
+                <p class="more-text">
+                    Our state-of-the-art facility is designed to provide the best possible care, with modern equipment and comfortable surroundings. We also offer specialized services such as dental care, nutritional counseling, and behavioral consultations. Our goal is to provide comprehensive, high-quality veterinary care with an emphasis on exceptional client service and patient care. We work closely with pet owners to develop customized care plans that meet the unique needs of each pet.
+                </p>
+                <span class="read-more-btn">Read More</span>
+            </div>
+        </div>
+        <div class="col-md-6 fade-in">
+            <img src="about2.png" alt="What We Do Image">
+        </div>
+    </div>
+    <div class="row section-content">
+        <div class="col-md-6 fade-in">
+            <img src="about3.png" alt="Our Mission Image">
+        </div>
+        <div class="col-md-6 fade-in">
+            <div class="text-content">
+                <h2>Our Mission</h2>
+                <p class="text">
+                    Our mission is to provide comprehensive, high-quality veterinary care with an emphasis on exceptional client service and patient care. We strive to create a welcoming and friendly environment where pets and their owners feel comfortable and cared for.
+                </p>
+                <p class="more-text">
+                    Our team is dedicated to improving the lives of pets through compassionate care, education, and community involvement.
+                </p>
+                <span class="read-more-btn">Read More</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-contact">
+        <p>Contact us at: <a href="mailto:arivworks@outlook.com">arivworks@outlook.com</a></p>
+        <p>Address: Ariv Executions, Technology Business Incubator, First floor, Excellence building,
+        Thiagarajar Advance Research Center block, Madurai-625015.</p>
+        <p>Phone: +91 99405 27561</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.read-more-btn').on('click', function() {
+            var moreText = $(this).prevAll('.more-text');
+            if (moreText.is(':visible')) {
+                moreText.slideUp();
+                $(this).text('Read More');
+            } else {
+                moreText.slideDown();
+                $(this).text('Read Less');
+            }
+        });
+
+        $(window).on('scroll', function() {
+            $('.fade-in').each(function() {
+                if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
+                    $(this).addClass('visible');
+                }
+            });
+        }).trigger('scroll');
+    });
+</script>
+
+</body>
+</html>

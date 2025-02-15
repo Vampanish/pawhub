@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Community - Pet Clinic</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .navbar {
+            background-color: #fd99cb;
+            /* Pink header background color */
+        }
+
+        .navbar-brand img {
+            max-width: 150px;
+            /* Reduced logo size */
+        }
+
+        .section-header {
+            background-color: #ffe4e1;
+            /* Light pink background color */
+            padding: 5px 0;
+            /* Reduced padding */
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            background-color: #fff0f5;
+            /* Light pink background color */
+            padding: 40px 0;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #ff69b4;
+            /* Pink text color */
+        }
+
+        h1 {
+            font-size: 2rem;
+            /* Reduced font size for h1 */
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            /* Reduced font size for h2 */
+        }
+
+        /* Dropdown on hover */
+        .navbar .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            background-color: #ff69b4;
+            /* Pink dropdown background color */
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ffe4e1;
+            /* Light pink hover background color */
+            color: #ff69b4;
+            /* Pink hover text color */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff66b2;
+            text-decoration: none;
+        }
+
+        .btn-custom {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .navbar-nav .dropdown-menu {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+            z-index: 1050;
+            position: absolute;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item {
+            color: black;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            color: #5c2d91;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .carousel {
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 100;
+        }
+
+        .invalid-input {
+            border-color: red !important;
+            border-width: 5px;
+        }
+
+        .valid-input {
+            border-color: green !important;
+            border-width: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Pet Clinic Logo" height="50px" width="50px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">
+                        SERVICES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="petclinic.html">Pet clinic</a>
+                        <a class="dropdown-item" href="mahi_petneeds.html">Pet needs</a>
+                        <a class="dropdown-item" href="pharmacy.html">Pet pharmacy</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="community.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row section-header text-center">
+            <div class="col">
+                <h1>Join Our Community</h1>
+                <p class="lead"><strong>BECOME A PART OF OUR FAMILY</strong></p>
+            </div>
+        </div>
+        <div class="section-content">
+            <h2>Personal Information</h2>
+            <form id="joinForm">
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="name"></label>
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="age"></label>
+                            <input type="number" class="form-control" id="age" placeholder="Age" required>
+                            <div class="invalid-feedback">Please enter your age.</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="role"></label>
+                            <select class="form-control" id="role" required>
+                                <option value="">Select Role</option>
+                                <option>Volunteer</option>
+                                <option>Member</option>
+                                <option>Donor</option>
+                                <option>Sponsor</option>
+                                <option>Adopter</option>
+                                <option>Foster</option>
+                                <option>Other</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a role.</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4" id="otherRoleDiv" style="display: none;">
+                        <label for="otherRole"></label>
+                        <input type="text" class="form-control" id="otherRole" placeholder="Please specify">
+                        <div class="invalid-feedback">Please specify your role.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="genderMale" name="gender" value="Male" required>
+                            <label class="form-check-label" for="genderMale">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="genderFemale" name="gender" value="Female" required>
+                            <label class="form-check-label" for="genderFemale">Female</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="genderOther" name="gender" value="Other" required>
+                            <label class="form-check-label" for="genderOther">Other</label>
+                        </div>
+                        <div class="invalid-feedback">Please select your gender.</div>
+                    </div>
+                </div>
+
+                <h2>Contact Information</h2>
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="contact">Contact number</label>
+                            <input type="number" class="form-control" id="contact" pattern="\d{10}" placeholder="Enter valid 10-digit number" required>
+                            <div class="invalid-feedback">Please enter a valid 10-digit contact number.</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter valid email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="additionalContact">Additional contact number (Optional)</label>
+                            <input type="text" class="form-control" id="additionalContact" pattern="\d{10}">
+                            <div class="invalid-feedback">Please enter a valid 10-digit additional contact number.</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="address">Address</label>
+                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                        <div class="invalid-feedback">Please enter your address.</div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-custom" id="joinNowButton">Join Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-contact">
+            <p>Contact us at: <a href="mailto:arivworks@outlook.com">arivworks@outlook.com</a></p>
+            <p>Address: Ariv Executions, Technology Business Incubator, First floor, Excellence building, Thiagarajar
+                Advance Research center block, Madurai-625015.</p>
+            <p>Phone: +91 99405 27561</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('role').addEventListener('change', function () {
+            var otherRoleDiv = document.getElementById('otherRoleDiv');
+            if (this.value === 'Other') {
+                otherRoleDiv.style.display = 'block';
+                document.getElementById('otherRole').setAttribute('required', 'required');
+            } else {
+                otherRoleDiv.style.display = 'none';
+                document.getElementById('otherRole').removeAttribute('required');
+            }
+        });
+
+        document.getElementById('joinForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var form = this;
+            if (form.checkValidity() === false) {
+                event.stopPropagation();
+                form.classList.add('was-validated');
+            } else {
+                alert("Form is valid and ready to be submitted!");
+                form.submit();
+            }
+        });
+
+        // Custom validation for contact numbers
+        function validateContactInput(input) {
+            if (input.value.length === 10 && /^\d+$/.test(input.value)) {
+                input.classList.remove('invalid-input');
+                input.classList.add('valid-input');
+            } else {
+                input.classList.remove('valid-input');
+                input.classList.add('invalid-input');
+            }
+        }
+
+        document.getElementById('contact').addEventListener('input', function () {
+            validateContactInput(this);
+        });
+
+        document.getElementById('additionalContact').addEventListener('input', function () {
+            validateContactInput(this);
+        });
+    </script>
+</body>
+
+</html>

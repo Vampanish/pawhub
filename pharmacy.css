@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffefff;
+}
+
+.bg-pink {
+    background-color: #ff99ff;
+}
+
+.text-pink {
+    color: #ff99ff;
+}
+
+.btn-pink {
+    background-color: #f4cde0;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 150px;
+    margin: 10px auto;
+    display: block;
+}
+
+.btn-pink:hover {
+    background-color: gray;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.category-item {
+    text-align: center;
+    max-width: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f4cde0;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+header .logo img {
+    width: 50px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+footer .footer-nav {
+    margin-bottom: 10px;
+}
+
+footer .footer-nav a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .footer-contact p {
+    margin: 5px 0;
+}
+.navbar-nav .dropdown-menu {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better depth */
+    transition: background 0.3s ease; /* Smooth transition for background */
+    z-index: 1050; /* Ensure the dropdown is above other elements */
+    position: absolute; /* Positioning context for dropdown */
+}
+
+/* Font color inside dropdown menu */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black /* Violet color */
+}
+
+/* Font color on hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #5c2d91; /* Darker violet on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover */
+}
+
+/* Ensure the carousel has lower z-index */
+.carousel {
+    position: relative; /* Ensure it’s positioned properly */
+    z-index: 1; /* Lower z-index to stay below dropdown */
+}
+
+/* Ensure the dropdown menu container is properly positioned */
+.navbar {
+    position: relative; /* Set positioning context for the dropdown */
+    z-index: 100; /* Ensure navbar has a high z-index */
+}
